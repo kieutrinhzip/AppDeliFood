@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5DC"
+    tools:context=".Activity.SearchActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarsearch"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFA500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Tìm kiếm"
+        app:titleTextColor="#3d33a8"
+        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/lns"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarsearch">
+        <EditText
+            android:id="@+id/edtsearch"
+            android:hint="Nhập từ khóa để tìm kiếm sản phẩm"
+            android:paddingLeft="5dp"
+            android:layout_margin="10dp"
+            android:layout_width="345dp"
+            android:background="#ffffff"
+            android:layout_height="45dp"/>
+        <ImageView
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-15dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/searchinsearch"
+            android:layout_width="40dp"
+            android:layout_height="45dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lns"
+        tools:layout_editor_absoluteX="5dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
